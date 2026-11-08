@@ -172,6 +172,15 @@ footer a { color: var(--ink); }
    created: when the project was started. The page lists the newest first. */
 const PROJECTS = [
   {
+    name: "The Collection", kind: "app", status: "live", genre: "Photo portfolio · Firearms",
+    created: "2026-11-08T17:51:52-05:00",
+    shot: "shots/firearm-collection.jpg",
+    desc: "A photo record of my firearms collection: 13 pieces from FN, Glock, SIG Sauer, Atlas Gunworks and more. Open any piece to browse its album full-screen.",
+    keys: [["← →", "next photo"], ["Esc", "close"]],
+    play: "https://tsotoshi.github.io/Firearm-Collection/",
+    repo: "https://github.com/tsotoshi/Firearm-Collection"
+  },
+  {
     name: "Midnight Jelly", kind: "game", status: "live", genre: "One-button arcade",
     created: "2026-11-06T20:43:18-05:00",
     shot: "shots/midnight-jelly.jpg",
@@ -231,7 +240,7 @@ function card(p) {
   const keys = p.keys.length
     ? `<div class="keys">${p.keys.map(([k, a]) => `<span><kbd>${esc(k)}</kbd>${esc(a)}</span>`).join("")}</div>` : "";
   const play = p.play
-    ? `<a class="btn play" href="${esc(p.play)}" target="_blank" rel="noopener">${ICON_PLAY}Play</a>` : "";
+    ? `<a class="btn play" href="${esc(p.play)}" target="_blank" rel="noopener">${ICON_PLAY}${p.kind === "game" ? "Play" : "Open"}</a>` : "";
   return `<article class="cart" data-kind="${p.kind}">
     <div class="screen">${screen}</div>
     <div class="label">
