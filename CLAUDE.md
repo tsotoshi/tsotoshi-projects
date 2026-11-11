@@ -47,7 +47,7 @@ A one-page portfolio that shows off tsotoshi's small browser games and apps. Vis
 
 _Last updated: 2026-11-10_
 
-- Done: The site lists all 8 projects (Midgar Flap, TravelTrax, The Collection, Midnight Jelly, Range Day, Connect Four, Crack the Safe, Shopping & Returns Tracker). Has a light/dark switch and Games/Apps filters.
+- Done: The site lists all 8 projects (Midgar Flap, TravelTrax, The Collection, Midnight Jelly, Range Day, Connect Four, Crack the Safe, Shopping & Returns Tracker). Has a light/dark switch and Games/Apps filters. This session added Midgar Flap and TravelTrax (with a dark-mode dashboard screenshot) and rewrote this CLAUDE.md.
 - In progress: Nothing.
 - Next: Add a screenshot and live link for Shopping & Returns Tracker once it's published.
 - Decisions/notes: The TravelTrax screenshot is its dark-mode dashboard in demo mode. To retake it, run that app locally with `npm run dev` and no Supabase keys. Midgar Flap is labelled as a fan work not affiliated with Square Enix.
