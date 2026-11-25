@@ -26,7 +26,7 @@ A one-page portfolio that shows off tsotoshi's small browser games and apps. Vis
 ## How the page works
 
 - Every project card is built from the `PROJECTS` list near the bottom of `index.html`. To add or change a project, edit that list, not the HTML.
-- Fields: `name`, `kind` ("game" or "app"), `status` ("live" or "wip"), `genre`, `created` (ISO date the project was started), `shot` (path in `shots/`, or `null` for a placeholder), `desc`, `keys` (list of `[key, action]` pairs; can be empty), `play` (live URL, or `null` to hide the button) and `repo`.
+- Fields: `name`, `kind` ("game" or "app"), `status` ("live" or "wip"), `genre`, `created` (ISO date the project was started), `shot` (path in `shots/`, or `null` for a placeholder), `desc`, `keys` (list of `[key, action]` pairs; can be empty), `play` (live URL, or `null` to hide the button) and `repo` (GitHub URL, or `null` to hide the Source button, e.g. for a private repo).
 - Cards are sorted newest first by `created`, so the order of the list doesn't matter.
 - Screenshots are shown at 2:1 and cropped from the top, so the bottom of each image gets cut off.
 - Browsers keep images for up to 10 minutes. When you replace a screenshot, raise the `?v=` number on its `shot` path (e.g. `shots/traveltrax.jpg?v=3` to `?v=4`) so visitors see the new one.
@@ -45,9 +45,9 @@ A one-page portfolio that shows off tsotoshi's small browser games and apps. Vis
 
 ## Current status
 
-_Last updated: 2026-11-10_
+_Last updated: 2026-11-24_
 
-- Done: The site lists all 8 projects (Midgar Flap, TravelTrax, The Collection, Midnight Jelly, Range Day, Connect Four, Crack the Safe, Shopping & Returns Tracker). Has a light/dark switch and Games/Apps filters. This session added Midgar Flap and TravelTrax (with a dark-mode dashboard screenshot) and rewrote this CLAUDE.md.
+- Done: The site lists all 9 projects (Stamp Card, Midgar Flap, TravelTrax, The Collection, Midnight Jelly, Range Day, Connect Four, Crack the Safe, Shopping & Returns Tracker). Has a light/dark switch and Games/Apps filters. This session added Stamp Card (screenshot of its sign-in page) and made the Source button optional.
 - In progress: Nothing.
 - Next: Add a screenshot and live link for Shopping & Returns Tracker once it's published.
-- Decisions/notes: The TravelTrax screenshot is its dark-mode dashboard in demo mode. To retake it, run that app locally with `npm run dev` and no Supabase keys. Midgar Flap is labelled as a fan work not affiliated with Square Enix.
+- Decisions/notes: Stamp Card is a real client's app (a nail salon). Its repo stays private, so its `repo` is `null` and it has no Source button. Its screenshot shows only the sign-in page, so no customer data appears. The TravelTrax screenshot is its dark-mode dashboard in demo mode. To retake it, run that app locally with `npm run dev` and no Supabase keys. Midgar Flap is labelled as a fan work not affiliated with Square Enix.
